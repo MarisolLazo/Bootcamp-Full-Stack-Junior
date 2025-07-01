@@ -1,1 +1,0 @@
-# Bootcamp-Full-Stack-Junior
