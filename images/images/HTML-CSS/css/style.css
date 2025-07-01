@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root{
+    --primary-color: #18e8ef;
+    --secondary-color: #c43131;
+    --text-color: white;
+    --background-color: gray;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: gray;
+    background-image: url(../assets/images/background-adare-restaurant.jpg);
+    background-size: cover;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vh;
+    text-align: center;
+    
+}
+/* Header */
+
+.container .header{
+    height: 20vh;
+}
+
+/* Header Image */
+.container .header .img-container{
+   height: 15vh;
+   display: flex;
+   justify-content: center;
+}
+
+/* Header Image Logo */
+.container .header .img-container .img-logo{
+    height: 10vh;
+    
+}
+
+/* Navbar */
+
+.container .header .navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+.container .header .navbar .nav-items{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+/* Navbar Items */
+.container .header .navbar .nav-items:hover{
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 1.2em;
+    /* Utilizacion de keyframe
+    animation:navItemHover 0.3s ease-in-out  forwards; */
+}
+
+/* Navbar Items Active
+@keyframes navItemHover {
+    to {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+} */
+
+/*Main content */
+.container .main-container{
+    margin-top: 5vh;
+}
+
+/* Main Image */
+.container .main-container .main-text-container{
+    color: white;
+   padding: 1rem;
+}
+/* Main Image Text */
+.container .main-container .main-text{
+     font-family: 'Poppins', sans-serif;
+     font-size: 3.5em;
+     transition: 0.3s;
+}
+
+/* Main Image Hover */
+.container .main-container .main-text:hover{
+    text-shadow: 0.05em 0.05em 0.1em #000;
+    transition: 0.08s;
+    color: #18e8ef;
+}
+
+/* Main Text */
+.container .main-container .main-text article{
+    max-width: 40vw;
+    max-width: 0 auto;
+}
+
+/* Main Text Paragraph */
+.container .main-container .main-text article p{
+    color: rgb(156, 155, 155);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+}
+/* Main Text Paragraph Strong */
+.container .main-container .main-text article p strong a{
+    text-decoration: none;
+    color: white;
+     text-shadow: 0.01em 0.01em 0.1em #e90c0c;
+}
+/* Maps */
+.container .main-container .maps iframe{
+    max-width: 60vh;
+    height: 50vh;
+}
+
+/* Footer */
+.container .footer{
+color: white;
+}
+
+.container.footer h4{
+
+}
