@@ -32,3 +32,6 @@ git checkout -b nueva-rama
 
 Crear una rama Y cambios a ella
 git checkout -b nueva-rama
+
+
+Todo joya.
