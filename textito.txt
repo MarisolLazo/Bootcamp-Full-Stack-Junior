@@ -1,1 +1,34 @@
 Holii Bootcamp-Full-Stack-Junior
+
+Esto lo estoy haciendo desde la rama Marisol/textos
+
+git config --global user.name "Pepito fuentes"
+git config --global user.email Pepito@gmail.com
+
+Alistar los jugadores
+git add.
+
+Agregar los cambios ala version final
+git commit -m "Mensajito lindo"
+
+Cambiar nombre de rama en la cual estamos parados 
+git branch -M main
+
+Enlazar un repositorio local con un remoto
+git remote add origin https:\\url.git
+
+Enviar el repositorio local a el remoto
+git push -u origin main --force
+
+*-----------Branch-----------*
+Listar las ramas 
+git branch
+
+Eliminar la rama
+git branch -d nombre-rama
+
+Cambios de rama actual
+git checkout -b nueva-rama
+
+Crear una rama Y cambios a ella
+git checkout -b nueva-rama
