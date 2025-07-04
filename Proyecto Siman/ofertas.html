@@ -2,36 +2,92 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ofertas - Siman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ofertas</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-  <header>
-    <h1>Siman El Salvador</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="ofertas.html">Ofertas</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
+  <header class="Ofertas">
+    <h1>Ofertas</h1>
   </header>
 
-  <section class="ofertas">
-    <h2>Ofertas Especiales</h2>
-    <div class="producto">
-      <img src="img/promo 1 .jpg" alt="Producto en promoción" />
-      <h3>Perfume Dolce & Gabbana</h3>
-      <p>Antes $80.00 - Ahora $49.99</p>
-    </div>
-    <div class="producto">
-      <img src="img/promo 2.jpeg" alt="Producto en promoción" />
-      <h3>Bolso Nine West</h3>
-      <p>Antes $150.00 - Ahora $99.99</p>
-    </div>
-  </section>
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <i class="bi bi-cart4"></i>
+    <button id="openMenu">☰ Departamentos</button>
 
-  <footer>
-    <p>&copy; 2025 Siman El Salvador</p>
-  </footer>
+<!-- Menú lateral oculto -->
+<aside id="menuLateral" class="menu-lateral">
+  <button id="closeMenu" class="cerrar">✖</button>
+  <h3>Categorías</h3>
+  <ul>
+    <li>Rebajas</li>
+    <li>Pantallas y audio</li>
+    <li>Celulares y tablets</li>
+    <li>Tecnología</li>
+    <li>Zapatos</li>
+    <li>Belleza</li>
+    <li>Hogar</li>
+    <li>Accesorios de moda</li>
+    <li>Automotriz y ferretería</li>
+    <li>Otras categorías</li>
+  </ul>
+</aside>
+  </nav>
+
+  <section class="catalogo">
+    <div class="producto">
+      <img src="https://siman.vtexassets.com/arquivos/ids/6533252-500-auto?v=638750567818030000&width=500&height=auto&aspect=true" alt="Lavadora Samsung" />
+      <h4>Samsung</h4>
+      <h3>Aire Acondicionado Mini Split Samsung Windfree 12,000 BTU</h3>
+      <p class="precio-original">$649.00</p>
+      <p class="precio-descuento">$549.00</p>
+      <button>Agregar al carrito</button>
+      <button >Ver detalles</button>
+      
+    </div>
+
+    <div class="producto">
+      <img src="https://siman.vtexassets.com/arquivos/ids/6979155-1200-auto?v=638847622851330000&width=1200&height=auto&aspect=true" alt="" />
+      <h4>Home Furniture</h4>
+      <h3>Sala 3-2-1 reclinable pu/ Roberto</h3>
+      <p class="precio-original">$1,999.00</p>
+      <p class="precio-descuento">$1,599.00</p>
+      <button>Agregar al carrito</button>
+      <button >Ver detalles</button>
+    </div>
+
+    <div class="producto">
+      <img src="https://siman.vtexassets.com/arquivos/ids/5738073-1200-auto?v=638520841766370000&width=1200&height=auto&aspect=true" alt="" />
+      <h4>Everlast</h4>
+      <h3>Zapato casual Everlast color blanco para mujer</h3>
+      <p class="precio-original">$50</p>
+      <p class="precio-descuento">$45.90</p>
+      <button>Agregar al carrito</button>
+      <button >Ver detalles</button>
+    </div>
+
+    <div class="producto">
+      <img src="https://siman.vtexassets.com/arquivos/ids/6690634-1200-auto?v=638773957427030000&width=1200&height=auto&aspect=true" alt="" />
+      <h4>Samsung</h4>
+      <h3>Celular Samsung Galaxy S24 ultra 12GB RAM</h3>
+      <p class="precio-original">$1,279.00</p>
+      <p class="precio-descuento">$999.00</p>
+      <button>Agregar al carrito</button>
+      <button >Ver detalles</button>
+    </div>
+
+    <div class="producto">
+      <img src="https://siman.vtexassets.com/arquivos/ids/6614614-1200-auto?v=638760255728530000&width=1200&height=auto&aspect=true" alt="Dolce&Gabbana" />
+      <h4>Dolce&Gabbana</h4>
+      <h3>Q by Dolce&Gabbana Parfum</h3>
+      <p class="precio-original">$709.00</p>
+      <p class="precio-descuento">$599.00</p>
+      <button>Agregar al carrito</button>
+      <button >Ver detalles</button>
+    </div>
+    
+  </section>
 </body>
 </html>
