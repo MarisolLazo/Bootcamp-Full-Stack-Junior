@@ -1,100 +1,182 @@
-/* Google Fonts */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fefefe;
+  background-color: #f9f9f9;
   color: #333;
 }
-
-header {
-  background-color: #93003c;
+/* Barra de promoción */
+.promo-bar {
+  background-color: #a3021d;
   color: white;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+  font-weight: bold;
 }
 
-nav a {
+/* Header principal */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #a3021d;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-lExXNxOfpUivu9lpjl6xD8t8W-YDMYylog&s);
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  max-width: 500px;
+}
+
+/* Menú de navegación */
+.menu {
+  background-color: #a3021d;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.menu a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: hsl(0, 0%, 3%); 
+.menu a:hover {
+  color: #0b0b0b;
+}
+
+.Ofertas{
+    color: #a3021d;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
 
-.hero {
-  background: url('../img/promo1.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #ff3366;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.ofertas {
+.catalogo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 40px;
+
+}
+
+.producto {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
   text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
 }
 
 .producto img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.contacto {
-  padding: 40px;
-  text-align: center;
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
 }
 
-.contacto form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.precio-descuento {
+  color: #a3021d;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-.contacto input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 80%;
-  max-width: 400px;
-}
-
-footer {
-  background-color: #93003c;
+button {
+  background-color: #a3021d;
   color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .ofertas {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
+button:hover {
+  background-color: #ff3366;
 }
+
+/* Botón para abrir el menú */
+#openMenu {
+  background-color: #a3021d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  top: 120px;
+  left: 10px;
+  z-index: 1001;
+  border-radius: 5px;
+}
+
+/* Estilo del menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1002;
+}
+
+.menu-lateral h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #93003c;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.menu-lateral li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Botón cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
