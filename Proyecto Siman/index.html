@@ -31,17 +31,50 @@
 
   <!-- Sección principal -->
   <section class="hero">
-    <h2>¡Promociones Exclusivas!</h2>
-    <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/22038a6f-3e77-49d4-a873-927ca3c9508b___a8d5283fa2442bd67cf350fcdda8bf5c.jpg" alt="">
-    <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/39e6a2ee-de8a-44a4-935f-04d2d2b0b0c5___d850b1ce087214e0c0b506ef1d070556.jpg" alt="">
-    <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/15187dd7-751c-49d4-a7a2-32dac0ea202b___e0535234ac473b7c2e0eca116702f1a0.jpg" alt="">
-    <p>Aprovecha descuentos especiales por tiempo limitado</p>
-    <a class="btn" href="ofertas.html">Ver Ofertas</a>
-  </section>
+  <div class="slider">
+    <div class="slide active">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/22038a6f-3e77-49d4-a873-927ca3c9508b___a8d5283fa2442bd67cf350fcdda8bf5c.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/39e6a2ee-de8a-44a4-935f-04d2d2b0b0c5___d850b1ce087214e0c0b506ef1d070556.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/15187dd7-751c-49d4-a7a2-32dac0ea202b___e0535234ac473b7c2e0eca116702f1a0.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/c146ac80-859b-478f-b8be-52562c1a60e1___8acab518aa2652e93e952d1bf06bb839.gif" alt="">
+    </div>
+     <div class="slide">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/db7ec98a-61c3-41d0-8dc0-f13e774d7a98___f58f95a4125148b59c7023e6a9aa7fa5.jpg" alt="">
+    </div>
+     <div class="slide">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/f88c87a2-204f-4c0f-aecd-8cc437f93481___3f52448d6e1559fcbaf517a7e6ad056d.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/1dfa1f88-de15-4fa6-9e1d-b93254018972___f9741414bb8f7ce1d835a36f6a3c44f1.gif" alt="">
+    </div>
+  </div>
+  <p>Aprovecha descuentos especiales por tiempo limitado</p>
+  <a class="btn" href="ofertas.html">Ver Ofertas</a>
+</section>
+
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Siman El Salvador - Todos los derechos reservados</p>
   </footer>
+
+  <script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 4000); // cambia cada 4 segundos
+</script>
 </body>
 </html>
