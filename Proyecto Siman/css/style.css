@@ -183,53 +183,72 @@ button:hover {
 .hero {
   text-align: center;
   background-color: #fff;
-  padding: 40px 20px;
+  padding: 100px 20px;
 }
 
 .slider {
-  position: relative;
   width: 100%;
   max-width: 800px;
   height: 400px;
-  margin: 0 auto 20px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.slider {
+  margin: 0 auto;
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  height: 400px; /* Puedes ajustar esta altura según lo que necesites */
-  margin: 0 auto 20px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius:10px;
 }
 
 .slide {
   position: absolute;
   top: 0;
-  left: 100%;
-  width: 100%; 
-  height: 100%;
+  left: 0;
+  width: auto;
+  height: 1%;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain; 
-  object-position: center;
+  border-radius: 10px;
+  
 }
 
-.slide.active {
-  left: 0;
-  opacity: 1;
+.slider-controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: -120px; 
 }
 
 
-.slide.active {
-  left: 0;
-  opacity: 1;
+.slider-controls button {
+  background-color: #a3021d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.slider-controls button:hover {
+  background-color: #c91538;
+}
+
+#categoriaTexto {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a3021d;
+}
+
