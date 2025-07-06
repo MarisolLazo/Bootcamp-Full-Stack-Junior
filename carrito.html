@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Carrito</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Carrito de Compras</h1>
+    <a href="ofertas.html">← Volver a Ofertas</a>
+  </header>
+
+  <main>
+    <section class="carrito">
+      <h2>Productos en el carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="total">Total: $0.00</p>
+      <button onclick="limpiarCarrito()">Vaciar carrito</button>
+    </section>
+  </main>
+
+  <script>
+    // Obtener carrito del localStorage
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+let total = 0;
+
+function renderCarrito() {
+  const lista = document.getElementById('lista-carrito');
+  const totalElement = document.getElementById('total');
+  lista.innerHTML = '';
+  total = 0;
+
+  carrito.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.nombre} - $${item.precio.toFixed(2)}`;
+    lista.appendChild(li);
+    total += item.precio;
+  });
+
+  totalElement.textContent = `Total: $${total.toFixed(2)}`;
+}
+
+function limpiarCarrito() {
+  localStorage.removeItem('carrito');
+  carrito = [];
+  renderCarrito();
+}
+
+renderCarrito();
+
+  </script>
+</body>
+</html>
