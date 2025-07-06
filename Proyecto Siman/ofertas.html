@@ -14,25 +14,23 @@
 
   <nav class="menu">
     <a href="index.html">Inicio</a>
-    <i class="bi bi-cart4"></i>
-    <button id="openMenu">☰ Departamentos</button>
 
-<!-- Menú lateral oculto -->
-<aside id="menuLateral" class="menu-lateral">
-  <button id="closeMenu" class="cerrar">✖</button>
-  <h3>Categorías</h3>
-  <ul>
-    <li>Rebajas</li>
-    <li>Pantallas</li>
-    <li>Celulares</li>
-    <li>Zapatos</li>
-    <li>Belleza</li>
-    <li>Hogar</li>
-    <li>Otras categorías</li>
-  </ul>
-</aside>
+     <!-- Menú lateral con categorías -->
+  <button id="openMenu">☰ Departamentos</button>
+  <aside id="menuLateral" class="menu-lateral">
+    <button id="closeMenu" class="cerrar">✖</button>
+    <h3>Departamentos</h3>
+    <ul>
+      <li data-categoria="Linea Blanca">Línea Blanca</li>
+      <li data-categoria="Hogar">Hogar</li>
+      <li data-categoria="Zapatos">Zapatos</li>
+      <li data-categoria="Telefonos">Teléfonos</li>
+      <li data-categoria="Belleza">Belleza</li>
+      <li data-categoria="Todos">Ver Todos</li>
+    </ul>
+  </aside>
   </nav>
-
+  
   <section class="catalogo">
     <div class="producto">
       <img src="https://siman.vtexassets.com/arquivos/ids/6533252-500-auto?v=638750567818030000&width=500&height=auto&aspect=true" alt="Lavadora Samsung" />
@@ -104,5 +102,54 @@
       <button >Ver detalles</button>
     </div>
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // ========== MENÚ LATERAL ==========
+  const openMenuBtn = document.getElementById("openMenu");
+  const menuLateral = document.getElementById("menuLateral");
+  const closeMenuBtn = document.getElementById("closeMenu");
+
+  openMenuBtn.addEventListener("click", () => {
+    menuLateral.classList.add("abierto");
+    openMenuBtn.style.display = "none";
+  });
+
+  closeMenuBtn.addEventListener("click", () => {
+    menuLateral.classList.remove("abierto");
+    openMenuBtn.style.display = "block";
+  });
+
+  // ========== FILTRADO POR CATEGORÍA ==========
+  const itemsMenu = document.querySelectorAll('#menuLateral li');
+  const productos = document.querySelectorAll('.producto');
+
+  itemsMenu.forEach(item => {
+    item.addEventListener('click', () => {
+      const categoria = item.dataset.categoria;
+      console.log("Categoría seleccionada:", categoria);
+
+      let mostrados = 0;
+
+      productos.forEach(producto => {
+        const catProd = producto.querySelector('h4').textContent.trim();
+        if (categoria === "Todos" || catProd === categoria) {
+          producto.style.display = "block";
+          mostrados++;
+        } else {
+          producto.style.display = "none";
+        }
+      });
+
+      if (mostrados === 0) {
+        console.log("No hay productos para esta categoría.");
+      }
+
+      // Ocultar menú lateral
+      menuLateral.classList.remove("abierto");
+      openMenuBtn.style.display = "block";
+    });
+  });
+});
+  </script>
 </body>
 </html>

@@ -41,29 +41,29 @@ body {
 
 /* Menú de navegación */
 .menu {
-  background-color: #a3021d;
+  background-color: #f0ecec;
   text-align: center;
   padding: 10px 0;
 }
 
 .menu a {
-  color: white;
-  margin: 0 15px;
+  color: rgb(3, 3, 3);
+  margin: center;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .menu a:hover {
-  color: #0b0b0b;
+  color: #a3021d;
 }
 
 .Ofertas{
-    color: #a3021d;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#a3021d ;
+   font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    
 }
-
 
 .catalogo {
   display: grid;
@@ -134,39 +134,48 @@ button:hover {
   border-radius: 5px;
 }
 
-/* Estilo del menú lateral */
 .menu-lateral {
   position: fixed;
   top: 0;
-  left: -300px;
-  width: 280px;
+  left: -100%; 
+  width: 250px;
   height: 100%;
-  background-color: white;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
   padding: 20px;
   transition: left 0.3s ease;
-  z-index: 1002;
+  z-index: 1000;
+  overflow-y: auto;
 }
 
-.menu-lateral h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #93003c;
+.menu-lateral.abierto {
+  left: 0;
 }
 
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-lateral li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+.menu-lateral .cerrar {
+  background:#a3021d;
+  border: none;
+  font-size: 20px;
   cursor: pointer;
+  float: right;
 }
 
-.menu-lateral li:hover {
-  background-color: #f0f0f0;
+.menu-lateral.abierto li:hover {
+  color: #a3021d;
+}
+.menu button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#menuTitulo {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #a3021d;
+  text-align: center;
 }
 
 /* Botón cerrar */
