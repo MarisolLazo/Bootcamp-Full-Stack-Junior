@@ -18,8 +18,11 @@
   <!-- Header con buscador -->
   <header class="main-header">
     <div class="logo">Siman El Salvador</div>
-    <input type="text" placeholder="Buscar productos..." class="search-bar" />
-    <i class="bi bi-person"><i class="bi bi-cart4"></i></i>
+    <form id="formulario-busqueda" action="ofertas.html" method="GET">
+  <input type="text" name="busqueda" id="campo-busqueda" placeholder="Buscar" />
+  <p id="mensaje-error" style="color: red; display: none; margin-top: 5px;"></p>
+</form>
+<i class="bi bi-person"><i class="bi bi-cart4"></i></i>
   </header>
 
   <!-- Menú de navegación -->
@@ -161,6 +164,19 @@
     showSlide(current);
   }, 4000);
 
+document.getElementById("formulario-busqueda").addEventListener("submit", function (e) {
+  const input = document.getElementById("campo-busqueda");
+  const mensaje = document.getElementById("mensaje-error");
+  const valor = input.value.trim();
+
+  if (/\d/.test(valor)) {
+    e.preventDefault(); 
+    mensaje.textContent = "No se permiten números en la búsqueda.";
+    mensaje.style.display = "block";
+  } else {
+    mensaje.style.display = "none";
+  }
+});
 </script>
 </body>
 </html>

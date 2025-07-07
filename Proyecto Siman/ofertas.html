@@ -260,6 +260,19 @@
     seccionDetalle.style.display = "none";
     seccionCatalogo.style.display = "grid"; // O el display que uses para tu catálogo
   });
+    // ===================== FILTRO POR BÚSQUEDA DESDE INDEX =====================
+  const params = new URLSearchParams(window.location.search);
+  const textoBusqueda = params.get("busqueda");
+
+  if (textoBusqueda) {
+    const textoMin = textoBusqueda.toLowerCase();
+    productos.forEach(producto => {
+      const nombreProd = producto.querySelector("h3").textContent.toLowerCase();
+      const categoriaProd = producto.querySelector("h4").textContent.toLowerCase();
+      const coincide = nombreProd.includes(textoMin) || categoriaProd.includes(textoMin);
+      producto.style.display = coincide ? "block" : "none";
+    });
+  }
 });
 
 </script>
