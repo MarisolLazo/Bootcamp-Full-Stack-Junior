@@ -14,6 +14,10 @@
 
   <nav class="menu">
     <a href="index.html">Inicio</a>
+   <a href="carrito.html" class="carrito-icono">
+  <i class="bi bi-cart4"></i>
+  <span id="contador-carrito">0</span>
+</a>
 
      <!-- Menú lateral con categorías -->
   <button id="openMenu">☰ Departamentos</button>
@@ -103,8 +107,8 @@
     </div>
   </section>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-  // ========== MENÚ LATERAL ==========
+document.addEventListener("DOMContentLoaded", () => {
+  // MENÚ LATERAL
   const openMenuBtn = document.getElementById("openMenu");
   const menuLateral = document.getElementById("menuLateral");
   const closeMenuBtn = document.getElementById("closeMenu");
@@ -119,37 +123,68 @@
     openMenuBtn.style.display = "block";
   });
 
-  // ========== FILTRADO POR CATEGORÍA ==========
+  // FILTRADO POR CATEGORÍA
   const itemsMenu = document.querySelectorAll('#menuLateral li');
   const productos = document.querySelectorAll('.producto');
 
   itemsMenu.forEach(item => {
     item.addEventListener('click', () => {
       const categoria = item.dataset.categoria;
-      console.log("Categoría seleccionada:", categoria);
-
-      let mostrados = 0;
-
       productos.forEach(producto => {
         const catProd = producto.querySelector('h4').textContent.trim();
-        if (categoria === "Todos" || catProd === categoria) {
-          producto.style.display = "block";
-          mostrados++;
-        } else {
-          producto.style.display = "none";
-        }
+        producto.style.display = (categoria === "Todos" || catProd === categoria) ? "block" : "none";
       });
-
-      if (mostrados === 0) {
-        console.log("No hay productos para esta categoría.");
-      }
-
-      // Ocultar menú lateral
-      menuLateral.classList.remove("abierto");
-      openMenuBtn.style.display = "block";
     });
   });
+
+  // AGREGAR AL CARRITO
+  function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push({ nombre, precio });
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarContador();
+   mostrarMensaje("Producto añadido al carrito 🛒");
+  }
+
+  // Mostrar mensaje bonito debajo del menú o producto
+function mostrarMensaje(texto) {
+  let msg = document.createElement("div");
+  msg.textContent = texto;
+  msg.className = "mensaje-carrito";
+  document.body.appendChild(msg);
+
+  setTimeout(() => {
+    msg.remove();
+  }, 3000);
+}
+
+
+  // VINCULAR BOTONES DE TODOS LOS PRODUCTOS
+  productos.forEach(producto => {
+    const nombre = producto.querySelector("h3").textContent.trim();
+    const precioTexto = producto.querySelector(".precio-descuento").textContent.replace('$', '').replace(',', '');
+    const precio = parseFloat(precioTexto);
+    const botones = producto.querySelectorAll("button");
+
+    if (botones[0]) {
+      botones[0].addEventListener("click", () => {
+        agregarAlCarrito(nombre, precio);
+      });
+    }
+  });
+
+  // CONTADOR EN ICONO DEL CARRITO
+  function actualizarContador() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const contador = document.getElementById('contador-carrito');
+    if (contador) {
+      contador.textContent = carrito.length;
+    }
+  }
+
+  actualizarContador();
 });
-  </script>
+</script>
+
 </body>
 </html>

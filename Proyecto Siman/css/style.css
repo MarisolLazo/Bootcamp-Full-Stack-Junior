@@ -365,4 +365,59 @@ button:hover {
   text-decoration: none;
   color: #333;
 }
+main {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+.carrito {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 400px;
+}
+#total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.carrito-icono {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
 
+#contador-carrito {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.mensaje-carrito {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-weight: bold;
+  z-index: 1000;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
