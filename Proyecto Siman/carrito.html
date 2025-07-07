@@ -23,7 +23,7 @@
   </main>
 
   <script>
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   let total = 0;
 
   function renderCarrito() {
@@ -50,29 +50,36 @@
 
   function comprarCarrito() {
     if (carrito.length === 0) {
-       mostrarMensaje("Tu carrito esta vacio");;
+      mostrarMensaje("Tu carrito está vacío");
       return;
     }
 
-    // Simular compra
     mostrarMensaje("Gracias por su compra 🛒");
     localStorage.removeItem('carrito');
     carrito = [];
     renderCarrito();
   }
-// Mostrar mensaje bonito debajo del menú o producto
-function mostrarMensaje(texto) {
-  let msg = document.createElement("div");
-  msg.textContent = texto;
-  msg.className = "mensaje-carrito";
-  document.body.appendChild(msg);
 
-  setTimeout(() => {
-    msg.remove();
-  }, 3000);
-}
+  function limpiarCarrito() {
+    localStorage.removeItem('carrito');
+    carrito = [];
+    renderCarrito();
+    mostrarMensaje("Carrito vaciado 🗑️");
+  }
+
+  function mostrarMensaje(texto) {
+    let msg = document.createElement("div");
+    msg.textContent = texto;
+    msg.className = "mensaje-carrito";
+    document.body.appendChild(msg);
+
+    setTimeout(() => {
+      msg.remove();
+    }, 3000);
+  }
 
   renderCarrito();
-  </script>
+</script>
+
 </body>
 </html>
