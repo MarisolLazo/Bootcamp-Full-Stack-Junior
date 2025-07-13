@@ -93,7 +93,7 @@ let etiquetas = t => {
 };
 temperaturasC.map(t => console.log(etiquetas(t)));
 
-// ------------------ EJERCICIO 10 ------------------
+// ------------------ EJERCICIO 10 -------------------
 let calcularPromediosTurnos = ([manana, tarde, noche]) => {
   let promedio = arr => arr.reduce((a, b) => a + b, 0) / arr.length;
 
