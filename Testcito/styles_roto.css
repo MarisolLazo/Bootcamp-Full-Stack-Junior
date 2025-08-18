@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.main-bodyy {
+  background-colour: #192c63;
+  font-familiy: 'Montserrat', sans-serif;
+  colr: #fff;
+  margin 0;
+  padding: 0
+}
+
+.wraper {
+  widht: 90%;
+  margin: auto;
+}
+
+.nabar {
+  display: flex;
+  justify-content: space-betwen;
+  align-item: center;
+  paddin: 1.5rem 0;
+}
+
+.logo-text {
+  font-size: 2.5em;
+}
+.logo-text span {
+  color: rgb(10,165,165)
+  text-shadow 1px 1px 3px white;
+}
+
+.nav-menuu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0
+}
+.nav-menuu a {
+  text-decoration: none
+  color: white;
+}
+
+.main-ctn {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 4rem
+}
+
+.foto-container img {
+  widht: 100%;
+  border-radius: 10px
+  transition transform 0.5s;
+}
+
+.boton {
+  background: #bb0b83;
+  color: white;
+  padding: 12px;
+  borderr: none;
+  cursor: ponter;
+}
+
+.typingg {
+  overflow: hiddn;
+  border-right: 2px white;
+  animation: typing 2s steps(25);
+}
+@keyframes typing {
+  to {
+    width: 100%
+  }
+}
+
+.projectcard {
+  backgroun-color: #233a7a;
+  padding: 1rem;
+  radius: 8px;
+  width: 300px
+}
+
+.img-top {
+  width 100%;
+  border-radius: 10px;
+}
+
+.enlaces {
+  display: flex
+  justify-content: space-between
+}
+
+.formularioo {
+  maxwidth: 600px;
+  background: #f8f9fa;
+  padding: 2rem
+  border-radius: 10px;
+}
+
+.inpt {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.inptt {
+  height: 100px;
+  widht: 100%;
+}
+
+.bt-submit {
+  background-color: blueviolet
+  color: #fff;
+  padding: 0.75rem;
+  border none;
+  cursor: pointer;
+}
+
+.redessociales {
+  display flex;
+  justify-content: center;
+  gap: 2rem;
+  margintop: 1rem;
+}
