@@ -137,6 +137,10 @@ let usuarito3:IUser = {
     email: "jairo@kpo.com",
     password: "123456789",
     rol: "admin"
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571

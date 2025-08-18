@@ -6,4 +6,8 @@ export function setupCounter(element: HTMLButtonElement) {
   }
   element.addEventListener('click', () => setCounter(counter + 1))
   setCounter(0)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571

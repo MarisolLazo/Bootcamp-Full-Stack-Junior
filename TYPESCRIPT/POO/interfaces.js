@@ -14,4 +14,8 @@ var Animal = /** @class */ (function () {
     return Animal;
 }());
 var d10s = new Animal("m", "chucho");
+<<<<<<< HEAD
 console.log(d10s.getAnimal());
+=======
+console.log(d10s.getAnimal()); 
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571

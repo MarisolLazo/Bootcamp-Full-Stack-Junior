@@ -94,4 +94,8 @@ var Usuario = /** @class */ (function () {
 }());
 var usuarito = new Usuario("jose@meduermo.com", "123456789");
 usuarito.changePassword('987654321');
+<<<<<<< HEAD
 console.log(usuarito.showCredentials());
+=======
+console.log(usuarito.showCredentials());
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571

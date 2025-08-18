@@ -23,7 +23,30 @@ var nose = "PUEDO SER CUALQUIER COSA";
 var noDefinido = undefined;
 console.log(numerito);
 console.log(numero);
+<<<<<<< HEAD
+=======
+//Declaracion de funciones
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571
 function saludar(nombreParam) {
     return "Holiwiis, ".concat(nombreParam);
 }
 console.log(saludar("Jairo"));
+<<<<<<< HEAD
+=======
+// Estructuras de datos
+// Array
+//Vamos a guardar un array de numeros O un array de STRINGS
+var arraycito = [1, 2, 3, 4];
+arraycito = ["as"];
+//Vamos a guardar dentro de EL ARRAY, numeros o strings
+var arraycitoDobleDato = [123, "numero de la suerte", 2555];
+//arraycito.push("asdad") NO FUNCIONA
+// Tupla
+var arrayEspecifico = [27, "Jairo", "otro string"];
+//Podemos llegar a tener 2 tipos de datos
+// VARIABLE :1TIPO | 2TIPO 
+var dosTiposDeDatos = null;
+dosTiposDeDatos = "";
+var programador = { name: "Jairo", age: 27 };
+var fsj30 = [{ name: "Jairo", age: 27 }, { name: "Jorge", age: 25 }];
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571

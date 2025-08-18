@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siman - Promociones Exclusivas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Barra de promoción superior -->
+  <div class="promo-bar">
+    COMPRA AQUÍ HASTA 48 CUOTAS O 12 MESES SIN INTERESES*
+  </div>
+
+  <!-- Header con buscador -->
+  <header class="main-header">
+    <div class="logo">Siman El Salvador</div>
+    <form id="formulario-busqueda" action="ofertas.html" method="GET">
+  <input type="text" name="busqueda" id="campo-busqueda" placeholder="Buscar" />
+  <p id="mensaje-error" style="color: red; display: none; margin-top: 5px;"></p>
+</form>
+<i class="bi bi-person"><i class="bi bi-cart4"></i></i>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="ofertas.html">Ofertas</a>
+</nav>
+  <!-- Sección principal -->
+  <section class="hero">
+    <div class="banner-top">
+    <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/b146e4a8-381f-4308-82d3-0022ba677f5b___94137beec6a594c5a8b802d6818e769b.png" alt="Banner Promocional">
+  </div>
+  <div class="slider">
+    <div class="slide active" data-categoria="Linea Blanca">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/22038a6f-3e77-49d4-a873-927ca3c9508b___a8d5283fa2442bd67cf350fcdda8bf5c.jpg" alt="Linea Blanca">
+    </div>
+    <div class="slide" data-categoria="Belleza">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/39e6a2ee-de8a-44a4-935f-04d2d2b0b0c5___d850b1ce087214e0c0b506ef1d070556.jpg" alt="Belleza">
+    </div>
+    <div class="slide" data-categoria="Moda">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/15187dd7-751c-49d4-a7a2-32dac0ea202b___e0535234ac473b7c2e0eca116702f1a0.jpg" alt="Moda">
+    </div>
+    <div class="slide" data-categoria="Zapatos">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/c146ac80-859b-478f-b8be-52562c1a60e1___8acab518aa2652e93e952d1bf06bb839.gif" alt="Zapato">
+    </div>
+     <div class="slide" data-categoria="Pantallas">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/db7ec98a-61c3-41d0-8dc0-f13e774d7a98___f58f95a4125148b59c7023e6a9aa7fa5.jpg" alt="TV">
+    </div>
+     <div class="slide" data-categoria="Nueva Fragancia">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/f88c87a2-204f-4c0f-aecd-8cc437f93481___3f52448d6e1559fcbaf517a7e6ad056d.jpg" alt="Nueva Fragancia">
+    </div>
+    <div class="slide" data-categoria="Telefonos">
+      <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/1dfa1f88-de15-4fa6-9e1d-b93254018972___f9741414bb8f7ce1d835a36f6a3c44f1.gif" alt="Telefonos">
+    </div>
+  </div>
+   <!-- Controles y categoría -->
+<div class="slider-controls">
+  <button id="prev">⟨</button>
+  <span id="categoriaTexto">Moda</span>
+  <button id="next">⟩</button>
+</div>
+  <p>Aprovecha descuentos especiales por tiempo limitado</p>
+  <a class="btn" href="ofertas.html">Ver Ofertas</a>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="newsletter">
+        <h2>siman.com</h2>
+        <p>Suscríbete para obtener las mejores ofertas</p>
+        <form>
+          <input type="email" placeholder="e-mail" required />
+          <button type="submit">Suscribirme</button>
+        </form>
+        <p class="phone"><i class="bi bi-telephone-fill">2298-3777</i>
+        <p>Mantente en contacto con nosotros</p>
+        <div class="social-icons">
+          <a href="https://web.facebook.com/simanelsalvador?_rdc=1&_rdr"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/almacenessiman_sv/"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/user/SimanElSalvador"><i class="bi bi-youtube"></i></a>
+        </div>
+        <select>
+          <option>El Salvador</option>
+          <option>Costa Rica</option>
+          <option>Guatemala</option>
+          <option>Nicaragua</option>
+        </select>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>SIMAN CORPORATIVO</h4>
+          <ul>
+            <li><a href="https://sv.siman.com/siman-corporativo">Quiénes Somos</a></li>
+            <li><a href="https://sv.siman.com/mision-vision">Visión y Misión</a></li>
+            <li><a href="https://sv.siman.com/historia">Historia</a></li>
+            <li><a href="https://sv.siman.com/sucursales">Sucursales</a></li>
+            <li><a href="https://sv.siman.com/servicios">Servicios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>PROGRAMAS</h4>
+          <ul>
+            <li><a href="https://sv.siman.com/monedero">Monedero</a></li>
+            <li><a href="https://sv.siman.com/certificados-de-regalo">Certificados de Regalo</a></li>
+            <li><a href="https://sv.siman.com/garantias-el-salvador">Garantías</a></li>
+            <li><a href="https://sv.siman.com/siman-pro">Siman PRO</a></li>
+            <li><a href="https://www.credisiman.com/">Credisiman</a></li>
+            <li><a href="https://sv.siman.com/terminos-marketplace">Marketplace</a></li>
+            <li><a href="https://sv.siman.com/vende-en-siman">Vende en Marketplace</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>SERVICIO AL CLIENTE</h4>
+          <ul>
+            <li><a href="https://sv.siman.com/faq">Preguntas Frecuentes</a></li>
+            <li><a href="https://sv.siman.com/devoluciones">Política de devoluciones</a></li>
+            <li><a href="https://sv.siman.com/contactenos">Contáctenos</a></li>
+            <li><a href="https://sv.siman.com/seguridad">Seguridad del sitio</a></li>
+            <li><a href="https://sv.siman.com/politica-de-privacidad">Política de Privacidad</a></li>
+            <li><a href="https://sv.siman.com/condiciones-ofertas">Condiciones ofertas</a></li>
+            <li><a href="https://sv.siman.com/derecho-de-retracto">Derecho de Retracto</a></li>
+            <li><a href="https://sv.siman.com/condiciones-de-uso">Condiciones de uso</a></li>
+            <li><a href="https://sv.siman.com/terminos-legales">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ <script>
+  /* ========== CARRUSEL ========== */
+  const slides = document.querySelectorAll('.slide');
+  const categoriaTexto = document.getElementById('categoriaTexto');
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
+
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+    categoriaTexto.textContent = slides[index].dataset.categoria;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+  // Automático
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 4000);
+
+document.getElementById("formulario-busqueda").addEventListener("submit", function (e) {
+  const input = document.getElementById("campo-busqueda");
+  const mensaje = document.getElementById("mensaje-error");
+  const valor = input.value.trim();
+
+  if (/\d/.test(valor)) {
+    e.preventDefault(); 
+    mensaje.textContent = "No se permiten números en la búsqueda.";
+    mensaje.style.display = "block";
+  } else {
+    mensaje.style.display = "none";
+  }
+});
+</script>
+</body>
+</html>

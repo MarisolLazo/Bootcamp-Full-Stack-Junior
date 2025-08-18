@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Ejemplo De uso de Interface en POO */
+=======
+//Ejemplo De uso de Interface en POO //
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571
 
 //Ejemplo simple -> No es una estructura que usariamos en un proyecto
 
@@ -59,4 +63,8 @@ interface IAnimal{
 
     //LOS METODOS TIENEN QUE QUEDAR PUBLICOS
     hacerRuido():string;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571

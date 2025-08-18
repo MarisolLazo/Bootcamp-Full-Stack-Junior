@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Estructuras de datos
 
 //Datos primitivos -> string, interger , float, double, bool, null 
@@ -104,6 +105,8 @@ console.log(programador);
 programador.correr();
 
 
+=======
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571
 //PILARES QUE NO SE PUEDEN UTILIZAR CON JAVASCRIPT
 // Encapsulamiento -> LIMITAR EL ACCESO A LA INFORMACION DE UNA CLASE -> Modificadores de acceso
 // Abstraccion -> Nos da herramientas o metodos para acceder a informacion encapsulada
@@ -156,6 +159,7 @@ nombresAlReves.forEach( (value,index) => {
     console.log(value);
 })
 
+<<<<<<< HEAD
 //Foreach que reciba el array completo
 
 let arrayNum = [1,2,3,4,6,5];
@@ -167,6 +171,8 @@ arrayNum.forEach( (value,index,array) => {
     }
 })
 
+=======
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571
 /* 
 for(let value of nombres){
     console.log(value);
@@ -188,6 +194,7 @@ let numeritosPorDos = numeritos.map((value) => {
     return value*2;
 })
 
+<<<<<<< HEAD
 console.log(numeritosPorDos);
 
 //Filtrar la informacion
@@ -244,3 +251,6 @@ console.log("Holiwis Jairo ".length);
 let sinEspacios = "Holiwis Jairo ".trim();
 console.log(sinEspacios);
 console.log(sinEspacios.length);
+=======
+console.log(numeritosPorDos);
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571

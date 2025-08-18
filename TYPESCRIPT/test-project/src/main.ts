@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import './style.css'
+=======
+import './style.css';
+>>>>>>> c6e842c4b535689b8f1ec454947f051026597571
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
